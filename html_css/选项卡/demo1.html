@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+		background-color:#ddd;
+		color:#fff;
+	}
+	input{
+		width:0;
+		outline:none;
+		border:none;
+	}
+	label{
+		display:inline-block;
+		width:50px;
+		line-height:40px;
+		text-align:center;
+		background-color: #6A9E52;
+		cursor: pointer;
+	}
+	li:nth-of-type(1) label{
+		margin-left: 40px;
+	}
+	ul{
+		width:360px;
+		height:300px;
+		position:relative;
+		list-style-type:none;
+	}
+	ul li div{
+		width:360px;
+		height:250px;
+		padding:20px;
+		margin:40px 0;
+		background-color:#0f0;
+	}
+	li{
+	float:left;
+	}
+	label+div{
+		display:none;
+		position:absolute;
+		top:0;
+		left:0;
+		width: 365px;
+		
+		background-color: #376B1F;
+
+	}
+	label+div p{
+		height: 42px;
+		line-height: 42px;
+	}
+	input:checked + label{
+		text-decoration:underline;
+		background-color: #376B1F;
+		padding-top: 4px;
+		margin-top: -4px;
+	}
+	input:checked ~ div{
+		display:block;
+	}
+  </style>
+ </head>
+ <body>
+  <div>
+	<h2>纯CSS手工制作的TAB选项卡</h2>
+	<ul>
+		<li>
+			<input type="radio" checked name="na" value='' id="tt" />
+			<label for="tt">头条</label>
+			<div>
+				<p>[热议]GalaxyS8成最值期待新机</p>
+				<p>[实用]魅族5s30分钟充电50%</p>
+				<p>[划算]爆款9.9元秒杀还包邮</p>
+				<p>[时尚]摩拜单车真的不如ofo?</p>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="na"  value='' id="zz"><label for="zz">公告</label>
+			<div>
+				<p>[热议]公告</p>
+				<p>[实用]魅族5s30分钟充电50%</p>
+				<p>[划算]公告</p>
+				<p>[时尚]摩拜单车真的不如ofo?</p>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="na"  value='' id="xx"><label for="xx">足球</label>
+			<div>
+				<p>[热议]GalaxyS8成最值期待新机</p>
+				<p>[实用]足球</p>
+				<p>[划算]爆款9.9元秒杀还包邮</p>
+				<p>[时尚]足球</p>
+			</div>
+		</li>
+	</ul>
+  </div>
+ </body>
+</html>

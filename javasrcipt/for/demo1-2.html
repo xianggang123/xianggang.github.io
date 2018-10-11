@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>向同学</title>
+<style>
+	*{margin: 0;padding: 0;}
+	ul{
+		list-style: none;
+	}
+	#wrap{
+		width: 150px;
+		margin: 50px;
+
+	}
+	#wrap li{
+		overflow: hidden;
+		height: 40px;
+		
+	}
+	#wrap li p{
+		height: 40px;
+		border: 1px solid #000;
+		background-color: green;
+	}
+	#wrap .list{
+		font-size: 18px;
+		color: #fff;
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+	<ul id="wrap">
+		<li>
+			<p class="list">同事</p>
+			<p>阿里</p>
+			<p>大力</p>
+			<p>星云</p>
+		</li>
+		<li>
+			<p class="list">好友</p>
+			<p>猴儿</p>
+			<p>沐儿</p>
+			<p>颖儿</p>
+			<p>淳儿</p>
+			<p>香儿</p>
+		</li>
+		<li>
+			<p class="list">VIP学员</p>
+			<p>阿里</p>
+			<p>阿卡</p>
+			<p>阿利</p>
+			<p>阿普</p>
+			<p>阿达</p>
+			<p>阿门</p>
+		</li>
+	</ul>
+	<!-- <ul id="wrap">
+		<li>
+			<ul class="list">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+		<li>
+			<ul class="list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+		<li>
+			<ul class="list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+	</ul> -->
+   <script>
+   	let aLi = document.getElementsByTagName("li"),
+   		aList = document.getElementsByClassName("list"),
+   		aP =document.getElementsByTagName("p")/*,
+   		index*/;
+   			for(let i = 0; i < aLi.length; i++){
+   				aList[i].bool=true;
+   				aList[i].onclick =function(){
+   					/*for(let j = 0; j < aLi.length; j++){
+   						aLi[j].style.height = "40px";
+   					}*/
+   					/*if(index!==undefined){
+   						aLi[index].style.height = "40px";
+   					}
+   					index=i;
+   					aLi[i].style.height = "auto";*/
+   					if (aList[i].bool) {
+   						aLi[i].style.height = "auto";
+   						aList[i].bool=false;
+   					}else {
+   						aLi[i].style.height = "40px";
+   						aList[i].bool=true;
+   					}
+
+   			}
+   			
+   		}
+   </script>
+</body>
+</html>

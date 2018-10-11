@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>向同学</title>
+<style>
+	*{margin: 0;padding: 0;}
+	#wrap{
+		width: 600px;
+		height: 400px;
+		font-size: 12px;
+		border: 2px solid;
+		margin: auto;
+	}
+	#wrap span{
+		display: inline-block;
+		width: 100px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		box-sizing:border-box;
+		border: 1px solid;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		
+	</div>
+   <script>
+   	(function(){
+   		let oWrap = document.getElementById("wrap"),
+   		num = 0,//span个数
+   		index = null;//接收setInterval 下标
+   		function change(){
+   			if(++num===49){
+   				clearInterval(index);
+   			}else{
+   				oWrap.innerHTML += `<span style="background-color:${getRGB()};">${getRGB()}</span>`;
+   			}
+   		}
+   		index=setInterval(change,600);
+   		function getRGB(){
+   			let r = parseInt(Math.random()*256),
+   				g = parseInt(Math.random()*256),
+   				b = parseInt(Math.random()*256);
+   			return `rgb(${r},${g},${b})`;
+   		}
+   	}())
+   </script>
+</body>
+</html>

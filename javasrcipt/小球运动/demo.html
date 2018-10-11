@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>向同学</title>
+<style>
+	*{margin: 0;padding: 0;}
+	#wrap{
+		position: relative;
+		width: 500px;
+		height: 500px;
+		margin: 50px auto;
+		border: 1px solid #f00;
+		border-radius: 50%;
+	}
+	#wrap div{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+	#wrap img{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<img src="images/10.jpg" alt="">
+	</div>
+   <script>
+   (function(){
+   		 let oWrap = document.getElementById("wrap"),
+   	 	 aDiv =oWrap.getElementsByTagName("div"),
+   	 	 oImg =oWrap.getElementsByTagName("img")[0],
+   	 	 index = 0,
+   	 	 deg = 0;
+   	 	 function run(){
+   	 	 	let x = 250+250*Math.cos(deg*Math.PI/180)-25,
+   	 	 		y = 250+250*Math.sin(deg*Math.PI/180)-25;
+   	 	 	oImg.style.top = y + "px";
+   	 	 	oImg.style.left = x + "px";
+   	 	 	if(deg%10 ===0){
+   	 	 		index%= aDiv.length;
+   	 	 		aDiv[index].style.top = y + "px";
+   	 	 		aDiv[index].style.left = x + "px"; 
+   	 	 		aDiv[index].style.backgroundColor = getRGB();
+   	 	 		index++;
+
+   	 	 	}
+   	 	 	deg++;
+   	 	 };
+   	 	 
+   	 	 setInterval(run,1000/60)
+   	 	 function getRGB(){
+   	 	 	let r=parseInt(Math.random()*256),
+   	 	 		g=parseInt(Math.random()*256),
+   	 	 		b=parseInt(Math.random()*256);
+   	 	 	return `rgb(${r},${g},${b})`;
+   	 	 }
+   }());
+   	
+   </script>
+</body>
+</html>

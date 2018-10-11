@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>向同学</title>
+<style>
+	*{margin: 0;padding: 0;}
+	#wrap{
+		width: 400px;
+		height: 400px;
+		margin: auto;
+	}
+	.box1{
+		width: 300px;
+		height: 95px;
+		margin-bottom: 50px;
+		padding-top: 65px;
+		text-align: center;
+		background-color:#ff3;
+	}
+	.box2{
+		width: 300px;
+		height: 95px;
+		padding-top: 65px;
+		text-align: center;
+		background-color:#f44;
+	}
+	
+		
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box1">小哥哥来啊</div>
+		<div class="box2">你去小哥哥哪里吧</div>
+	</div>
+   <script>
+   	let oBox1 = document.getElementsByClassName("box1")[0];
+   	let oBox2 = document.getElementsByClassName("box2")[0];
+   	oBox1.onmouseenter =function(){
+   		oBox1.innerHTML= "小哥哥你真好";
+   		oBox2.innerHTML= "小哥哥你真去啊";
+   	}
+   	oBox1.onmouseleave =function(){
+   		oBox1.innerHTML= "小哥哥你别走啊";
+   		oBox2.innerHTML= "小哥哥你还是爱我的";
+   	}
+   	oBox2.onmouseenter =function(){
+   		oBox1.innerHTML= "小哥哥我不爱你了";
+   		oBox2.innerHTML= "我就知道小哥哥不会去的";
+   	}
+   	oBox2.onmouseleave =function(){
+   		oBox1.innerHTML= "小哥哥我还是爱你的";
+   		oBox2.innerHTML= "小哥哥你回来";
+   	}
+   </script>
+</body>
+</html>

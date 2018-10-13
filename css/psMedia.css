@@ -1,63 +1,86 @@
 @charset 'utf-8';
 @media (max-width: 700px) {
-	.content{
-		width: 100%;
-		margin: auto;
-	}
-	#nav .content{
-		width: 100%;
-		margin: auto;
-	}
-	#nav .content > span{
-		display: block;
-		margin: 0;
-		font-size: 24px;
-	}
-	#nav .content div{
-		display: block;
-	}
-	#nav .content div span{
-		display: block;
-		margin: 5px 0 0;
-		text-align: center;
-		font-size: 36px;
-		font-weight: bold;
-	}
-	#content .p-c-top div{
-		font-size: 14px;
-	}
-	#content .p-c-top div >span{
-		font-size: 18px;
-	}
-	#content .p-c-btn{
-		width: 100%;
-		height: 100%;
-	}
-	#content .p-c-btn .list{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		width: 100%;
-		height: 100%;
-	}
-	#content .p-c-btn .list li{
-		width: 80%;
-		height: 400px;
-		float: none;
-	}
-	#content .p-c-btn .list li div.active p span,#content .p-c-btn .list li div.on p span{
-		font-size: 35px;
-		line-height: 50px;
-	}
-	#content .p-c-btn .list li .txt a{
-		font-size: 18px;
-		font-weight: 400;
-	}
-	#footer .bottom{
-		font-size: 14px;
-		font-weight:500;
-	}
-	#footer .bottom p span{
-		display:block;
-	}
+
+    figure img {
+        width: 100%;
+        border: 3px solid rgba(0, 0, 0, 0);
+    }
+
+    figure img:hover {
+        border: 3px solid red;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 2em;
+        background-color: antiquewhite;
+        padding: .2em;
+        border-radius: 15px
+    }
+
+    figure {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        margin: auto;
+    }
+    #nav .content {
+        width: 100%;
+        margin: auto;
+    }
+    #nav .content > span {
+        display: block;
+        margin: 0;
+        font-size: 24px;
+    }
+    #nav .content div {
+        display: block;
+    }
+    #nav .content div span {
+        display: block;
+        margin: 5px 0 0;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    #content .p-c-top div {
+        font-size: 14px;
+    }
+    #content .p-c-top div > span {
+        font-size: 18px;
+    }
+    #content .p-c-btn {
+        width: 100%;
+        height: 100%;
+    }
+    #content .p-c-btn .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
+    #content .p-c-btn .list li {
+        width: 80%;
+        height: 400px;
+        float: none;
+    }
+    #content .p-c-btn .list li div.active p span,
+    #content .p-c-btn .list li div.on p span {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    #content .p-c-btn .list li .txt a {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    #footer .bottom {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #footer .bottom p span {
+        display: block;
+    }
 }
